@@ -19,4 +19,4 @@ The FIFO is empty when the read and write pointers are both equal. This conditio
 A FIFO is full when the pointers are again equal, that is, when the write pointer has wrapped around and caught up to the read pointer. 
 In order to distinguish between Full and Empty we will add an extra bit to each pointer (n + 1 bits). When the write pointer increments past the final FIFO address, the write pointer will increment the unused MSB while setting the rest of the bits back to zero. The same is done with the read pointer. 
 
-
+FifoAsync_v1.sv contains parameterized RTL for async FIFO in SystemVerilog. The number of entries in the FIFO are determined by the parameter DEPTH which should be a power of 2. The data width is determinded by parameter DATA_WIDTH. 
